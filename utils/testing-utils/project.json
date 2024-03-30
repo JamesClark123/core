@@ -1,0 +1,22 @@
+{
+  "name": "testing-utils",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "utils/testing-utils/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/utils/testing-utils",
+        "main": "utils/testing-utils/src/index.ts",
+        "tsConfig": "utils/testing-utils/tsconfig.lib.json",
+        "assets": [],
+        "project": "utils/testing-utils/package.json",
+        "compiler": "swc",
+        "format": ["cjs", "esm"]
+      }
+    }
+  },
+  "tags": []
+}
